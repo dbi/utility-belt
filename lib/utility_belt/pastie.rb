@@ -21,6 +21,8 @@ module UtilityBelt
       when :mswin
         pastie_url = pastie_url.chop if pastie_url[-1].chr == "\000"
         Kernel.system("start #{pastie_url}")
+      when :linux
+        kernel.system("xdg-open #{pastie_url}")
       end
 
       return pastie_url
