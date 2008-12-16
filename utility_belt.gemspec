@@ -1,6 +1,6 @@
 Gem::Specification.new do |s| 
   s.name = "utility_belt"
-  s.version = "1.0.7.1"
+  s.version = "1.0.7.2"
   s.author = "Giles Bowkett"
   s.email = "gilesb@gmail.com"
   s.homepage = "http://utilitybelt.rubyforge.org"
