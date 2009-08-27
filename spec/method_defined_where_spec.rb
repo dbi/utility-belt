@@ -19,8 +19,9 @@ describe "method_defined_where" do
   end
 
   it "should find a method in a mixin" do
-    require 'base64'
-    File.method_defined_where(:encode64).should == Base64
+    module DummyMixin; def self.dummy_method; end; end
+    class File; include DummyMixin; end
+    File.method_defined_where(:dummy_method).should == DummyMixin
   end
 
   it "should return nil if method can't be found" do
